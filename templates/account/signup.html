@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address*</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name*</label>
+                <input type="email" class="form-control" name="email" id="name" placeholder="Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="car_name" class="form-label">Car Name*</label>
+                <input type="text" class="form-control" name="car_name" id="car_name" placeholder="Car Name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="car_name" class="form-label">Slot Title</label>
+                <input type="text" class="form-control" name="slot_id" id="car_name" value="1" required readonly>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-block">Submit Details</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
